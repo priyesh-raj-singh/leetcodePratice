@@ -1,3 +1,4 @@
+[Discussion Post (created on 8/9/2021 at 17:19)](https://leetcode.com/problems/sqrtx/discuss/1510481/C%2B%2B-2-Line-Code-using-STL)  
 <h2>69. Sqrt(x)</h2><h3>Easy</h3><hr><div><p>Given a non-negative integer <code>x</code>,&nbsp;compute and return <em>the square root of</em> <code>x</code>.</p>
 
 <p>Since the return type&nbsp;is an integer, the decimal digits are <strong>truncated</strong>, and only <strong>the integer part</strong> of the result&nbsp;is returned.</p>
