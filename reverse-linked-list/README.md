@@ -1,3 +1,4 @@
+[Discussion Post (created on 12/9/2021 at 1:41)](https://leetcode.com/problems/reverse-linked-list/discuss/1516722/C%2B%2B-iterative-solution)  
 <h2>206. Reverse Linked List</h2><h3>Easy</h3><hr><div><p>Given the <code>head</code> of a singly linked list, reverse the list, and return <em>the reversed list</em>.</p>
 
 <p>&nbsp;</p>
