@@ -24,7 +24,7 @@ class Solution{
            if(nums[i] == 0){
                
                countZero++;
-               continue;
+              continue;
            }
            total *= nums[i];
        }
