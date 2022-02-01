@@ -10,20 +10,23 @@ using namespace std;
 
 class Solution{
 	public:
-    	long findNth(long N)
-{
-long ans=0;
-long mul=1;
-while(N!=0)
-{
-long dig=N%9;
-N=N/9;
-ans+=(mul*dig);
-mul=mul*10;
-}
-return ans;
-}
-    
+    	long long findNth(long long N)
+    {
+        // code here.
+        long long res = 0;
+        long long p = 1;
+        
+        while(N)
+        {
+            res += p * (N % 9);
+            
+            N /= 9;
+            
+            p *= 10;
+        }
+        
+        return res;
+    }
 };
 
 // { Driver Code Starts.
