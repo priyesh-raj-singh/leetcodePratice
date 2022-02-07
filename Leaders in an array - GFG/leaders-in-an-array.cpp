@@ -12,18 +12,20 @@ class Solution{
     //Function to find the leaders in the array.
     public:
     vector<int> leaders(int a[], int n){
-// code here
-int max = INT_MIN;
-vector<int> ans;
-for(int i=n-1; i>=0; i--){
-if(max <= a[i]){
-max = a[i];
-ans.push_back(max);
-}
-}
-reverse(ans.begin(), ans.end());
-return ans;
-}
+        // Code here
+        int max = INT_MIN;
+        vector<int> ans;
+        
+        for(int i = n-1 ; i>=0 ; i--){
+            if(a[i]>=max){
+                max = a[i];
+                ans.push_back(max);
+            }
+        }
+        reverse(ans.begin() , ans.end());
+        return ans;
+        
+    }
 };
 
 // { Driver Code Starts.
