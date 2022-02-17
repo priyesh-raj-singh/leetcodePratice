@@ -1,5 +1,5 @@
 # Check if Linked List is Palindrome
-## Easy 
+##  Easy 
 <div class="problem-statement">
                 <p></p><p><span style="font-size:18px">Given a singly linked list of size <strong>N</strong> of integers. The task is to check if the given linked list is palindrome or not.</span></p>
 
