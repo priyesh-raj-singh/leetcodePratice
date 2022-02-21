@@ -8,36 +8,32 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+class cmp{
+    public: bool operator()(ListNode* a , ListNode *b){
+        return a->val>b->val;
+    }
+    
+};
 class Solution {
 public:
     ListNode* mergeKLists(vector<ListNode*>& lists) {
-        if(lists.size()==0) return NULL;
-        priority_queue<int,vector<int>,greater<int>> pq;
+        priority_queue<ListNode* , vector<ListNode*> ,cmp> q;
+        ListNode *dummy = new ListNode(-1);
+        ListNode *tail = dummy;
         
-        for(int i=0;i<lists.size();i++)
-        {
-            ListNode* head = lists[i];
-            while(head!=NULL)
-            {
-                pq.push(head->val);
-                head = head->next;
+        for(int i = 0 ; i<lists.size() ; i++){
+            if(lists[i]!=NULL){
+                q.push(lists[i]);
             }
         }
-        ListNode* start = NULL;
-        ListNode* end = NULL;
-        while(!pq.empty()) {
-            if(start==NULL)
-            {
-                start = new ListNode(pq.top());
-                end = start;
-                pq.pop();
-            }
-            else{
-                end->next = new ListNode(pq.top());
-                pq.pop();
-                end = end->next;
-            }
+        while(q.size()){
+            ListNode *temp = q.top();
+            tail->next = temp;
+            tail = temp;
+            q.pop();
+            if(temp->next!=NULL) q.push(temp->next);
         }
-            return start;
+        return dummy->next;
+        
     }
 };
