@@ -9,7 +9,7 @@ public:
             }
             
         }
-        for( ; index<nums.size() ; index++){
+        for( index; index<nums.size() ; index++){
             nums[index] = 0;
         }
         
