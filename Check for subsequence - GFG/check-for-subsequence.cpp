@@ -9,20 +9,14 @@ class Solution{
     bool isSubSequence(string A, string B) 
     {
         // code here
-        int i ,j;
-        while(i<A.length() && j <B.length()){
-            if(A[i]==B[j]){
-                i++;
-                j++;
+        int k = 0 ;
+        for(int i = 0; i<B.size() ; i++){
+            if(B[i]==A[k]){
+                k++;
+                
             }
-            else{
-                j++;
-            }
-            if(i==A.length())
-               return true;
         }
-        
-        
+        if(k==A.size()) return true;
         return false;
     }
 };
