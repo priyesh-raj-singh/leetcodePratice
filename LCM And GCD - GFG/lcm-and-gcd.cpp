@@ -8,10 +8,10 @@ class Solution {
     #define ll long long
 
 ll gcdhelper(ll A, ll B){
-    if(A == 0)
-        return B;
+    if(B == 0)
+        return A;
 
-    return gcdhelper(B % A, A);
+    return gcdhelper(B ,  A%B);
 }
 
 vector<ll> lcmAndGcd(ll A , ll B) {
