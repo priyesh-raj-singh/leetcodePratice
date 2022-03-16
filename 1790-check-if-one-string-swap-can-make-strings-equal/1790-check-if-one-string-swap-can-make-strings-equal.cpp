@@ -12,11 +12,6 @@ public:
             
             if(pos.size()==2)
                 swap(s1[pos[0]],s1[pos[1]]);
-            
-            
-            
-            
-        
         return s1==s2;
         
     }
