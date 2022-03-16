@@ -101,29 +101,33 @@ struct Node {
 class Solution
 {
     public:
-   void BST1(Node* root, vector<int> &ans){
+    //Function to return a list of integers denoting the node 
+    //values of both the BST in a sorted order.
+    void bst1(Node *root , vector<int> &ans ){
         if(root==NULL){
-            return;
+            return ;
         }
-        BST1(root->left, ans);
+        bst1(root->left , ans);
         ans.push_back(root->data);
-        BST1(root->right, ans);
+        bst1(root->right , ans);
+        
+        
     }
-    void BST2(Node* root, vector<int> &ans){
-        if(root==NULL){
-            return;
-        }
-        BST2(root->left, ans);
-        ans.push_back(root->data);
-        BST2(root->right, ans);
-    }
+    // void bst2(Node *root , vector<int> &ans){
+    //     if(root==NULL){
+    //         return ;
+    //     }
+    //     bst2(root->left , ans);
+    //     ans.push_back(root->data);
+    //     bst2(root->right , ans);
+    // }
     vector<int> merge(Node *root1, Node *root2)
     {
        //Your code here
        vector<int> ans;
-       BST1(root1, ans);
-       BST2(root2, ans);
-       sort(ans.begin(), ans.end());
+       bst1(root1 , ans);
+       bst1(root2 , ans);
+       sort(ans.begin() , ans.end());
        return ans;
     }
 };
