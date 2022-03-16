@@ -11,15 +11,14 @@ using namespace std;
 class Solution
 {
     public:
-    
-    vector<vector<int>> ans;
+    vector<vector<int>> ans; 
     void helper(vector<int> arr , int i , int n , vector<int> v){
         if(i==n){
             ans.push_back(v);
-            return;
+            return ;
         }
         v.push_back(arr[i]);
-        helper(arr , i+1 , n , v);
+        helper(arr,i+1 , n , v);
         v.pop_back();
         helper(arr , i+1 , n , v);
     }
@@ -30,6 +29,8 @@ class Solution
         helper(A , 0 , A.size() , v);
         sort(ans.begin() , ans.end());
         return ans;
+        
+        
     }
 };
 
