@@ -2,7 +2,7 @@ class Solution {
 public:
     int sumOddLengthSubarrays(vector<int>& arr) {
         int n = arr.size();
-        vector<int> preSum(n+2);
+        vector<int> preSum(n+1);
         int sum = 0 ; 
          preSum[0] = 0;
         
